@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/ESCURO/Desktop/bahala%20na/MAS.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confess My Love</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial, sans-serif';
+            background-image: url('horizon.jpg'); /* Local image file */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; /* White text for contrast */
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5); /* Transparent background */
+            color: white; /* Font color changed to white */
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.5rem; /* Increased font size for emphasis */
+        }
+
+        .main-content {
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.5rem; /* Increased text size */
+        }
+
+        .confession {
+            margin-top: 1rem;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.9); /* White background */
+            border-radius: 10px;
+            color: #333;
+        }
+
+        button {
+            background-color: #ff4b6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            width: 60px; /* Make buttons uniform in size */
+            height: 60px;
+            display: inline-block;
+        }
+
+        button:hover {
+            background-color: #d83a56;
+        }
+
+        video {
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .audio-controls button {
+            background-color: #ff4b6d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .audio-controls button:hover {
+            background-color: #d83a56;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⭐ Hey you... ⭐</h1>
+    </header>
+    <div class="main-content">
+        <p>I just wanted to stop by and say hello. 💖</p>
+        <div class="confession">
+            <p>
+               These songs remind me of you. 
+		If you feel on top of the world, click M. 
+		If you feel a little blue, click A. 
+		And if you feel caught in the middle, click S.
+            </p>
+            <!-- Audio Controls -->
+            <div class="audio-controls">
+                <button onclick="playPauseAudio(&#39;M.mp3&#39;)">M</button>
+                <button onclick="playPauseAudio(&#39;A.mp3&#39;)">A</button>
+                <button onclick="playPauseAudio(&#39;S.mp3&#39;)">S</button>
+            </div>
+
+            <!-- Hidden Image Container -->
+            <div id="image-container" style="display: none;">
+                <img src="./MAS_files/300x200.png" alt="Love Image">
+            </div>
+
+            <!-- Hidden Video Player -->
+            <div id="video-container" style="display: none;">
+                <video id="love-video" controls="">
+                    <source src="YTMBA.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>I hope you always find happiness. Be safe.⭐</p>
+    </footer>
+
+    <script>
+        let currentAudio = null; // Variable to store the currently playing audio
+
+        function playPauseAudio(fileName) {
+            if (currentAudio) {
+                currentAudio.pause(); // Pause any currently playing audio
+            }
+            currentAudio = new Audio(fileName);
+            currentAudio.play();
+        }
+
+        function showImage() {
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.style.display = 'block';
+        }
+
+        function playVideo() {
+            const videoContainer = document.getElementById('video-container');
+            const video = document.getElementById('love-video');
+            videoContainer.style.display = 'block';
+            video.play(); // Automatically plays the video
+        }
+    </script>
+
+
+</body></html>
